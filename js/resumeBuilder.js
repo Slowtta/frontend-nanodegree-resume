@@ -24,34 +24,34 @@ $("#main").append(bio.Contacts.mobile);
 */
 var work ={
 	"jobs":[
-	{"Terfas":{
+	{
 		"employer":"Terfas.com",
 		"title":"CEO",
 		"location":"Tlemcen, Algeria",
 		"dates":"Sept 2016",
 		"description":"www.terfas.com"
-	}},
-	{"CBPO":{
+	},
+	{
 		"employer":"ETBC",
 		"title":"Concrete Batch Plant Operator",
 		"location":"Remchi Tlemcen, Algeria",
 		"dates":"From Dec 2015 to Jun 2016",
 		"description":"Well! concrete is not that bad"
-	}},
-	{"Pedalo":{
+	},
+	{
 		"employer":"ClubZ",
 		"title":"Pedalo renter",
 		"location":"Portsay Maghnia Tlemcen, Algeria",
 		"dates":"Summers 2015 and 2016",
 		"description":"I just rent pedalos"
-	}},
-	{"InternetCafe":{
+	},
+	{
 		"employer":"Relax",
 		"title":"Internetcafe manager and Designer",
 		"location":"Tlemcen, Algeria",
 		"dates":"From 2012 to 2014",
 		"description":"Some managerial skills"
-	}}
+	}
 	]
 };
 var projects=[
@@ -79,26 +79,24 @@ var bio={
 };
 var education={
 	"schools":[
-	{
-		"AttarBros":{
+		{
 			"name":"Lycée frères Attar",
 			"location":"Chetouane, Tlemcen",
 			"degree":"Degree in chemical engineering",
 			"dates":"Jun 2011"
 		},
-		"EPST":{
+		{
 			"name":"Prep-technical Sciences",
 			"location":"Tlemcen",
 			"degree":"2nd year Common core",
 			"dates":"From 2011 to 2013"
 		},
-		"MI":{
+		{
 			"name":"Mathematics and Computer Science",
 			"location":"Tlemcen",
 			"degree":"IT Bachelor's degree",
 			"dates":"2014"
 		}
-	}
 	],
 	"OnlineCourses":[
 	{
