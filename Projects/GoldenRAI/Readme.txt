@@ -1,0 +1,1 @@
+Using machine learning we can make the job of gaming designer more easy with a realistic result making the machine create consepts environment and caracters look special and pretie with the Golden ratio
