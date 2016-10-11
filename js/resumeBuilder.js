@@ -1,40 +1,16 @@
-/* var formattedName=HTMLheaderName.replace("%data%","Habib Derrar");
-var formattedRole=HTMLheaderRole.replace("%data%","Lifelong Learner");
-
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-var bio ={
-	"Name":"Derrar Habib",
-	"Role":"Lifelong Learner",
-	"Skills":["Programming","Drummer","Painting","Coolness"],
-	"PictureURL":"images/me.jpg",
-	"Contacts": {
-		"mobile":"+213 542 237 621",
-		"github":"/Slowtta",
-		"twitter":"/Slowtta",
-		"location":"Tlemcen, Algeria"
-	},
-};
-bio["city"]="Tlemcen";
-$("#main").append(bio.Name);
-$("#main").append(bio.Skills);
-$("#main").append(bio.Role);
-$("#main").append(bio["city"]);
-$("#main").append(bio.Contacts.mobile);
-*/
 var work ={
 	"jobs": [{
 		"employer": "Terfas.com",
 		"title": "CEO",
 		"location": "Tlemcen, Algeria",
 		"dates": "Sept 2016",
-		"description": "www.terfas.com"
+		"description": "www.terfas.com is a website that helps people find skilled workers, and helps the workers to find a job it's not a recutement platforme, it's all about trensparency in construction field."
 	}, {
 		"employer": "ETBC",
 		"title": "Concrete Batch Plant Operator",
 		"location": "Remchi Tlemcen, Algeria",
 		"dates": "From Dec 2015 to Jun 2016",
-		"description": "Well! concrete is not that bad"
+		"description": "Before I engage in this job as an operator (a guy who manages the automatic production of a concrete plant), I knew nothing about the concrete, I remember the day my boss presented the Machine it was a Frumecar model ECA-1002, I ask if the silos contains water, he did not answered but hired me anyway, after that I find out that silos contains ciment, that was awkward, after 7 months I learned a lot about the construction field. Moral of The story dirt is learning."
 	}, {
 		"employer": "ClubZ",
 		"title": "Pedalo renter",
@@ -60,13 +36,14 @@ var projects=[{
 var bio={
 	"name": "Mohammed Habib Derrar",
 	"Role": "Lifelong Learner",
+	"PictureURL":"images/me.jpg",
 	"welcomeMessage": "",
 	"biopic": "",
 	"Contacts": {
 		"mobile": "+213 542 237 621",
 		"email": "bovitch.md@gmail.com",
 		"github": "Slowtta",
-		"twitter": "Slowtta",
+		"twitter": "@Slowtta",
 		"location": "Tlemcen, Algeria"
 	}
 };
@@ -109,10 +86,20 @@ var education={
 		"url": "https://www.khanacademy.org/math/precalculus"
 	}]
 };
+var formattedName=HTMLheaderName.replace("%data%",bio.name);
+var formattedRole=HTMLheaderRole.replace("%data%",bio.Role);
+$("#header").append(formattedName);
+$("#header").append(formattedRole);
+
 for (job in work.jobs){
 	$("#workExperience").append(HTMLworkStart);
 	var formattedEmployer =HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
 	var formattedTitle =HTMLworkTitle.replace("%data%", work.jobs[job].title);
 	var formattedEmployerTitle =formattedEmployer + formattedTitle;
+	var formattedDates =HTMLworkDates.replace("%data%", work.jobs[job].dates);
+	var formattedLocation =HTMLworkLocation.replace("%data%", work.jobs[job].location);
+	var formattedDescription =HTMLworkDescription.replace("%data%", work.jobs[job].description);
 	$(".work-entry:last").append(formattedEmployerTitle);
+	$(".work-entry:last").append(formattedDates+formattedLocation);
+	$(".work-entry:last").append(formattedDescription);
 };
