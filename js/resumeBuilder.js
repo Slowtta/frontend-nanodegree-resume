@@ -27,14 +27,14 @@ var work ={
 };
 var projects=[{
 	"title": "Terfas",
-	"dates": "StaticV lunch Dec 2016",
+	"dates": "lunch Dec 2016",
 	"description": "Terfas is a rare truffle",
 	"images": [
 		"Projects/Terfas/img/Home3.png"
 	]
 }];
 var bio={
-	"name": "Mohammed Habib Derrar",
+	"name": "Mohammed Habib DERRAR",
 	"Role": "Lifelong Learner",
 	"PictureURL":"images/me.jpg",
 	"welcomeMessage": "",
@@ -91,7 +91,8 @@ var formattedRole=HTMLheaderRole.replace("%data%",bio.Role);
 $("#header").append(formattedName);
 $("#header").append(formattedRole);
 
-for (job in work.jobs){
+function displaywork(){
+	for (job in work.jobs){
 	$("#workExperience").append(HTMLworkStart);
 	var formattedEmployer =HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
 	var formattedTitle =HTMLworkTitle.replace("%data%", work.jobs[job].title);
@@ -103,3 +104,24 @@ for (job in work.jobs){
 	$(".work-entry:last").append(formattedDates+formattedLocation);
 	$(".work-entry:last").append(formattedDescription);
 };
+};
+displaywork();
+$(document).click(function(loc) {
+	var x=loc.pageX;
+	var y=loc.pageY;
+	logClicks(x,y);
+});
+projects.display =function(){
+	for(var i=0;i<projects.length;i++)
+	{
+	$("#projects").append(HTMLprojectStart);
+	$(".project-entry:last").append(HTMLprojectTitle.replace("%data%",projects[i].title));
+	$(".project-entry:last").append(HTMLprojectDates.replace("%data%",projects[i].dates));
+	$(".project-entry:last").append(HTMLprojectDescription.replace("%data%",projects[i].description));
+	for(var j=0;j<projects[i].images.length;j++)
+	{
+		$(".project-entry:last").append(HTMLprojectImage.replace("%data%",projects[i].images[j]));
+	}
+}
+};
+projects.display();
