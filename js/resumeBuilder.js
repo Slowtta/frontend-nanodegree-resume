@@ -36,16 +36,16 @@ var projects=[{
 var bio={
 	"name": "Mohammed Habib DERRAR",
 	"Role": "Lifelong Learner",
-	"PictureURL":"images/me.jpg",
+    "Contacts": {
+        "mobile": "+213 542 237 621",
+        "email": "bovitch.md@gmail.com",
+        "github": "Slowtta",
+        "twitter": "@Slowtta",
+        "location": "Tlemcen, Algeria"
+    },
+    "skills":[],
 	"welcomeMessage": "",
-	"biopic": "",
-	"Contacts": {
-		"mobile": "+213 542 237 621",
-		"email": "bovitch.md@gmail.com",
-		"github": "Slowtta",
-		"twitter": "@Slowtta",
-		"location": "Tlemcen, Algeria"
-	}
+	"biopic": "images/me.jpg"
 };
 var education={
 	"schools": [{
@@ -86,11 +86,21 @@ var education={
 		"url": "https://www.khanacademy.org/math/precalculus"
 	}]
 };
+
+bio.display =function()
+{
 var formattedName=HTMLheaderName.replace("%data%",bio.name);
 var formattedRole=HTMLheaderRole.replace("%data%",bio.Role);
-$("#header").append(formattedName);
-$("#header").append(formattedRole);
-
+$("#header").prepend(HTMLbioPic.replace("%data%",bio.biopic));
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
+$("#topContacts").append(HTMLmobile.replace("%data%",bio.Contacts.mobile));
+$("#topContacts").append(HTMLemail.replace("%data%",bio.Contacts.email));
+$("#topContacts").append(HTMLtwitter.replace("%data%",bio.Contacts.twitter));
+$("#topContacts").append(HTMLgithub.replace("%data%",bio.Contacts.github));
+$("#topContacts").append(HTMLlocation.replace("%data%",bio.Contacts.location));
+};
+bio.display();
 function displaywork(){
 	for (job in work.jobs){
 	$("#workExperience").append(HTMLworkStart);
