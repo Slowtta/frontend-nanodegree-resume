@@ -30,7 +30,7 @@ var projects=[{
 	"dates": "lunch Dec 2016",
 	"description": "Terfas is a rare truffle",
 	"images": [
-		"Projects/Terfas/img/Home3.png"
+		"Projects/Trufe/Home3.png"
 	]
 }];
 var bio={

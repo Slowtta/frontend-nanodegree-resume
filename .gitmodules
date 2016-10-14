@@ -1,0 +1,3 @@
+[submodule "frontend-nanodegree-resume"]
+	path = frontend-nanodegree-resume
+	url = https://github.com/Slowtta/frontend-nanodegree-resume.git
