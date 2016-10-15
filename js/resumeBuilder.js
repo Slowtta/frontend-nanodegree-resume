@@ -2,13 +2,13 @@ var work ={
 	"jobs": [{
 		"employer": "Terfas.com",
 		"title": "CEO",
-		"location": "paris",
+		"location": "Tlemcen",
 		"dates": "Sept 2016",
 		"description": "www.terfas.com is a website that helps people find skilled workers, and helps the workers to find a job it's not a recutement platforme, it's all about trensparency in construction field."
 	}, {
 		"employer": "ETBC",
 		"title": "Concrete Batch Plant Operator",
-		"location": "Tlemcen",
+		"location": "Remchi, Tlemcen",
 		"dates": "From Dec 2015 to Jun 2016",
 		"description": "Before I engage in this job as an operator (a guy who manages the automatic production of a concrete plant), I knew nothing about the concrete, I remember the day my boss presented the Machine it was a Frumecar model ECA-1002, I ask if the silos contains water, he did not answered but hired me anyway, after that I find out that silos contains ciment, that was awkward, after 7 months I learned a lot about the construction field. Moral of The story dirt is learning."
 	}, {
@@ -37,7 +37,7 @@ var projects=[{
 var bio={
 	"name": "Mohammed Habib DERRAR",
 	"Role": "Lifelong Learner",
-	"Contacts": {
+	"contacts": {
 		"mobile": "+213 542 237 621",
 		"email": "bovitch.md@gmail.com",
 		"github": "Slowtta",
@@ -51,19 +51,19 @@ var bio={
 var education={
 	"schools": [{
 		"name": "Lycée frères Attar",
-		"location": "Chetouane",
+		"location": "Chetouane, Tlemcen",
 		"degree": "Degree in chemical engineering",
 		"dates": "Jun 2011",
 		"major": ""
 	}, {
 		"name": "Prep-technical Sciences",
-		"location": "Bel Horizon Tlemcen",
+		"location": "BelHorizon, Tlemcen",
 		"degree": "2nd year Common core",
 		"dates": "From 2011 to 2013",
 		"major": ""
 	}, {
 		"name": "University AbouBaker Belkaid",
-		"location": "Tlemcen",
+		"location": "La rocade, Tlemcen",
 		"degree": "Mathematics and Computer Sciences, IT Bachelor's degree",
 		"dates": "2014",
 		"major": ""
@@ -115,11 +115,11 @@ var formattedRole=HTMLheaderRole.replace("%data%",bio.Role);
 $("#header").append(HTMLbioPic.replace("%data%",bio.biopic));
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
-$("#topContacts").append(HTMLmobile.replace("%data%",bio.Contacts.mobile));
-$("#topContacts").append(HTMLemail.replace("%data%",bio.Contacts.email));
-$("#topContacts").append(HTMLtwitter.replace(/%data%/gi,bio.Contacts.twitter));
-$("#topContacts").append(HTMLgithub.replace(/%data%/gi,bio.Contacts.github));
-$("#topContacts").append(HTMLlocation.replace("%data%",bio.Contacts.location));
+$("#topContacts").append(HTMLmobile.replace("%data%",bio.contacts.mobile));
+$("#topContacts").append(HTMLemail.replace("%data%",bio.contacts.email));
+$("#topContacts").append(HTMLtwitter.replace(/%data%/gi,bio.contacts.twitter));
+$("#topContacts").append(HTMLgithub.replace(/%data%/gi,bio.contacts.github));
+$("#topContacts").append(HTMLlocation.replace("%data%",bio.contacts.location));
 };
 
 work.display=function(){
